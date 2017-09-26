@@ -34,5 +34,13 @@ class PresentedTableViewController: UITableViewController {
     func close() -> Void {
         self.dismiss(animated: true, completion: nil)
     }
+	
+	override var preferredStatusBarStyle: UIStatusBarStyle {
+		return .lightContent
+	}
+	
+	override var prefersStatusBarHidden: Bool {
+		return false
+	}
 
 }

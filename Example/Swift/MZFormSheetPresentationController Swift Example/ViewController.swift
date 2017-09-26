@@ -8,9 +8,32 @@
 
 import UIKit
 //import MZFormSheetPresentationController
+extension UINavigationController {
+
+	// NOTE: Target 에 orientation(portraitUpsideDown) 이 설정되어 있더라도 변경되지 않는 문제 해결
+	open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+		return [.portrait, .portraitUpsideDown, .landscapeLeft, .landscapeRight]
+	}
+	
+	open override var preferredStatusBarStyle: UIStatusBarStyle {
+		return topViewController?.preferredStatusBarStyle ?? .default
+	}
+	
+	open override var prefersStatusBarHidden: Bool {
+		return false
+	}
+}
 
 class ViewController: UITableViewController {
 
+	override open var prefersStatusBarHidden: Bool {
+		return false
+	}
+	
+	override open var preferredStatusBarStyle: UIStatusBarStyle {
+		return .lightContent
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         MZTransition.registerClass(CustomTransition.self, for: .custom)

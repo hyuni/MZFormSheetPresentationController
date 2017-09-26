@@ -8,6 +8,6 @@ target 'MZFormSheetPresentationController Swift Example' do
   # Pods for MZFormSheetPresentationController Swift Example
     pod 'MZAppearance'
     pod 'JGMethodSwizzler'
-    pod 'MZFormSheetPresentationController'
+#    pod 'MZFormSheetPresentationController'
 
 end

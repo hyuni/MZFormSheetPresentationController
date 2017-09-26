@@ -318,6 +318,7 @@ CGFloat const MZFormSheetPresentationControllerDefaultAboveKeyboardMargin = 20;
     }
     [self.containerView addSubview:self.dimmingView];
     
+	[UIApplication sharedApplication].statusBarHidden = false;
     // this is some kind of bug :<, if we will delete this line, then inside custom animator
     // we need to set finalFrameForViewController to targetView
     [self presentedView].frame = [self frameOfPresentedViewInContainerView];
